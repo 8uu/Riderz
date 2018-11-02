@@ -17,4 +17,8 @@
     <color name="loginTextColor">#ffffff</color>
 
     <!-- Verification colors -->
+
+    <!-- Maps colors -->
+    <color name="searchBar">#ffffff</color>
+    <color name="searchBarAccent">#757575</color>
 </resources>

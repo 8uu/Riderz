@@ -16,12 +16,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ecse321.team10.riderz.dto.AdInformationDto;
 import com.ecse321.team10.riderz.dto.ItineraryDto;
 import com.ecse321.team10.riderz.dto.LocationDto;
 import com.ecse321.team10.riderz.dto.ReservationDto;
+import com.ecse321.team10.riderz.model.AdInformation;
 import com.ecse321.team10.riderz.model.Itinerary;
 import com.ecse321.team10.riderz.model.Location;
 import com.ecse321.team10.riderz.model.Reservation;
@@ -52,7 +56,11 @@ public class RouteController {
 	private ItineraryDto intineraryConvertToDto(Itinerary itinerary) {
 		return modelMapper.map(itinerary, ItineraryDto.class);
 	}
-	
+
+	private AdInformationDto adInformationConvertToDto(AdInformation adInfo) {
+		return modelMapper.map(adInfo, AdInformationDto.class);
+	}
+
 	/**
 	 * Insert an itinerary
 	 * 
@@ -473,5 +481,20 @@ public class RouteController {
 			reservationList.add(reservationConvertToDto(reservation));
 		sql.closeConnection();
 		return reservationList;
+	}
+
+	/**
+	 * Obtains an information about an advertisement using a tripID.
+	 * @param tripID
+	 * @return
+	 */
+	@RequestMapping(value = "adInfo", method = RequestMethod.GET)
+	public AdInformationDto getAdInfo( @RequestParam int tripID) {
+		AdInformationDto ad = null;
+		if (sql.connect()) {
+			ad = adInformationConvertToDto(sql.getAdInformation(tripID));
+		}
+		sql.closeConnection();
+		return ad;
 	}
 }

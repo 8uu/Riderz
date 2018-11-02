@@ -54,11 +54,30 @@ public class RiderzDrivers extends AppCompatActivity implements HttpRequestClien
         mapButtons();
     }
 
+
     @Override
     public void mapButtons() {
         Button resetButton = findViewById(R.id.forgotPasswordButton);
         Button loginButton = findViewById(R.id.loginButton);
         Button registerButton = findViewById(R.id.loginRegisterButton);
+
+        /*
+        // ****************************** DO NOT COMMIT ******************************************
+
+        Button button = findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RiderzDrivers.this, MapsDriversActivity.class);
+                intent.putExtra("username", "test-ty2");
+                RiderzDrivers.this.startActivity(intent);
+            }
+        });
+
+        // ************************************************************************************
+        */
 
         // Add event listener for reset button
         resetButton.setOnClickListener(new View.OnClickListener() {
@@ -110,6 +129,7 @@ public class RiderzDrivers extends AppCompatActivity implements HttpRequestClien
                 // Display error message
                 errorMsg.setText(msg);
                 errorMsg.setVisibility(View.VISIBLE);
+
             }
         });
 
@@ -117,7 +137,13 @@ public class RiderzDrivers extends AppCompatActivity implements HttpRequestClien
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO: Complete
+
+                
+                Intent intent = new Intent(RiderzDrivers.this,
+                        SignUpDriver.class);
+                RiderzDrivers.this.startActivity(intent);
+
+
             }
         });
     }
@@ -125,7 +151,7 @@ public class RiderzDrivers extends AppCompatActivity implements HttpRequestClien
     @Override
     public void syncHttpRequest() {
         // URL to target
-        final String loginUrl = URL.baseUrl + "login";
+        final String loginUrl = URL.baseUrl + URL.loginUrl;
 
         // Obtains values from EditText elements
         final String usernameText = username.getText().toString();

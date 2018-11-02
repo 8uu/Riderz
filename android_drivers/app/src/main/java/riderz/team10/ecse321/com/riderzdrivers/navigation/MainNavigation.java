@@ -25,6 +25,8 @@ import java.util.Arrays;
 
 import cz.msebera.android.httpclient.Header;
 import riderz.team10.ecse321.com.riderzdrivers.About;
+import riderz.team10.ecse321.com.riderzdrivers.DriverProfile;
+import riderz.team10.ecse321.com.riderzdrivers.MapsDriversActivity;
 import riderz.team10.ecse321.com.riderzdrivers.R;
 import riderz.team10.ecse321.com.riderzdrivers.RiderzDrivers;
 import riderz.team10.ecse321.com.riderzdrivers.constants.HTTP;
@@ -133,10 +135,9 @@ public class MainNavigation extends AppCompatActivity implements HttpRequestClie
 
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(MainNavigation.this, .class);
-//                MainNavigation.this.startActivity(intent);
-                // TODO: map to activity for creating a new trip
-                Log.e(TAG.mainNavTag, "New Trip");
+                Intent intent = new Intent(MainNavigation.this, MapsDriversActivity.class);
+                intent.putExtra("username", username);
+                MainNavigation.this.startActivity(intent);
             }
         });
 
@@ -167,10 +168,9 @@ public class MainNavigation extends AppCompatActivity implements HttpRequestClie
 
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(MainNavigation.this, .class);
-//                MainNavigation.this.startActivity(intent);
-                // TODO: map to activity for viewing user profile
-                Log.e(TAG.mainNavTag, "User Profile");
+                Intent intent = new Intent(MainNavigation.this, DriverProfile.class);
+                intent.putExtra("username", username);
+                MainNavigation.this.startActivity(intent);
             }
         });
 

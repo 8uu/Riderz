@@ -1,4 +1,4 @@
-package riderz.team10.ecse321.com.riderzpassengers;
+package riderz.team10.ecse321.com.riderzpassengers.assets.geolocation;
 
 import android.content.Context;
 import android.location.Address;

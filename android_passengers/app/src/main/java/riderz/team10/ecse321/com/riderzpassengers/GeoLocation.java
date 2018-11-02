@@ -3,7 +3,6 @@ package riderz.team10.ecse321.com.riderzpassengers;
 import android.location.Address;
 import android.location.Geocoder;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.google.android.gms.maps.model.LatLng;
 

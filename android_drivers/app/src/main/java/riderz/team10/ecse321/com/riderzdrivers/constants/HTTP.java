@@ -6,4 +6,5 @@ public class HTTP {
      */
     public static final int maxTimeout = 2500;
     public static final int maxTimeoutExtended = 5000;
+
 }

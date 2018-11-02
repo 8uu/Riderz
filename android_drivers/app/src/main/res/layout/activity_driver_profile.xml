@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DriverProfile"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/driverName"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/textbox_height"
+        android:text="Driver's Name: "
+        android:textColor="@color/darkAccent"
+        app:layout_constraintBottom_toTopOf="@+id/driverCarMake"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/driverCarMake"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/textbox_height"
+        android:text="Car Make: "
+        android:textColor="@color/darkAccent"
+        app:layout_constraintBottom_toTopOf="@+id/driverCarModel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driverName" />
+
+    <TextView
+        android:id="@+id/driverCarModel"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/textbox_height"
+        android:text="Car Model: "
+        android:textColor="@color/darkAccent"
+        app:layout_constraintBottom_toTopOf="@+id/driverCarYear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driverCarMake" />
+
+    <TextView
+        android:id="@+id/driverCarYear"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/textbox_height"
+        android:text="Car Year: "
+        android:textColor="@color/darkAccent"
+        app:layout_constraintBottom_toTopOf="@+id/driverCarLicensePlate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driverCarModel" />
+
+    <TextView
+        android:id="@+id/driverCarLicensePlate"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/textbox_height"
+        android:text="Car License Plate: "
+        android:textColor="@color/darkAccent"
+        app:layout_constraintBottom_toTopOf="@+id/driverCarSeats"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driverCarYear" />
+
+    <TextView
+        android:id="@+id/driverCarSeats"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/textbox_height"
+        android:text="Number of available seats: "
+        android:textColor="@color/darkAccent"
+        app:layout_constraintBottom_toTopOf="@+id/driverRating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driverCarLicensePlate" />
+
+    <TextView
+        android:id="@+id/driverRating"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/textbox_height"
+        android:text="Current Rating: "
+        android:textColor="@color/darkAccent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driverCarSeats" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserProfile"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginBottom="28dp"
+        android:text="Passenger's Name: "
+        android:textColor="@color/darkAccent"
+        app:layout_constraintBottom_toTopOf="@+id/userEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/userEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="27dp"
+        android:text="User Email: "
+        android:textColor="@color/darkAccent"
+        app:layout_constraintBottom_toTopOf="@+id/userPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+    <TextView
+        android:id="@+id/userPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="27dp"
+        android:text="User Phone: "
+        android:textColor="@color/darkAccent"
+        app:layout_constraintBottom_toTopOf="@+id/userFirstName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userEmail" />
+
+    <TextView
+        android:id="@+id/userFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="27dp"
+        android:text="User First Name: "
+        android:textColor="@color/darkAccent"
+        app:layout_constraintBottom_toTopOf="@+id/userLastName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userPhone" />
+
+    <TextView
+        android:id="@+id/userLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="181dp"
+        android:text="User Last Name: "
+        android:textColor="@color/darkAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userFirstName" />
+
+
+</android.support.constraint.ConstraintLayout>

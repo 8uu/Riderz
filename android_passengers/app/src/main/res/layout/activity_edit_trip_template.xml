@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context=".trip.EditTripTemplate"
+                                             tools:layout_editor_absoluteY="81dp">
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/datePickerETT"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <DatePicker
+                android:id="@+id/editTripDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/datePickerButtonsETT"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/datePickerButtonsETT"
+                android:layout_width="@dimen/button_width_large"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTripDate">
+
+            <Button
+                    android:id="@+id/confirmDateETT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/confirm_button_global"
+                    android:textColor="@color/buttonTextColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                    android:id="@+id/cancelDateETT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/cancel_button_global"
+                    android:textColor="@color/buttonTextColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/editTripTempOuter"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/outer_layout_height_large"
+            android:layout_marginStart="@dimen/outer_layout_margin_horizontal"
+            android:layout_marginEnd="@dimen/outer_layout_margin_horizontal"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+                android:id="@+id/startingAddressETT"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/starting_address_hint"
+                android:singleLine="true"
+                app:layout_constraintBottom_toTopOf="@+id/startingTimeETT"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+                android:id="@+id/startingTimeETT"
+                android:layout_width="0dp"
+                android:focusable="false"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/starting_time_hint"
+                android:singleLine="true"
+                app:layout_constraintBottom_toTopOf="@+id/endingAddressETT"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/startingAddressETT" />
+
+        <EditText
+                android:id="@+id/endingAddressETT"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/ending_address_hint"
+                android:singleLine="true"
+                app:layout_constraintBottom_toTopOf="@+id/endingTimeETT"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/startingTimeETT" />
+
+        <EditText
+                android:id="@+id/endingTimeETT"
+                android:layout_width="0dp"
+                android:focusable="false"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="@string/ending_time_hint"
+                android:singleLine="true"
+                app:layout_constraintBottom_toTopOf="@+id/editTripTempButtons"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/endingAddressETT" />
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/editTripTempButtons"
+                android:layout_width="@dimen/button_width_large"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/editTripTemplateError"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/endingTimeETT">
+
+            <Button
+                    android:id="@+id/confirmEditTrip"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/confirm_button_global"
+                    android:textColor="@color/buttonTextColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+                android:id="@+id/editTripTemplateError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:text="@string/default_error_text"
+                android:textColor="@color/errorColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTripTempButtons" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+            android:id="@+id/timePickerETT"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TimePicker
+                android:id="@+id/editTripClock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="time"
+                app:layout_constraintBottom_toTopOf="@+id/timePickerButtonsETT"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/timePickerButtonsETT"
+                android:layout_width="@dimen/button_width_large"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTripClock">
+
+            <Button
+                    android:id="@+id/confirmTimeETT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/confirm_button_global"
+                    android:textColor="@color/buttonTextColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                    android:id="@+id/cancelTimeETT"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/cancel_button_global"
+                    android:textColor="@color/buttonTextColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

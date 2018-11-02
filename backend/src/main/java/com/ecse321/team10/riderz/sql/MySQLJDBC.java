@@ -18,6 +18,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.ecse321.team10.riderz.model.Driver;
+import com.ecse321.team10.riderz.model.AdInformation;
 import com.ecse321.team10.riderz.model.Car;
 import com.ecse321.team10.riderz.model.User;
 import com.ecse321.team10.riderz.model.Trip;
@@ -1542,6 +1543,42 @@ public class MySQLJDBC {
 //			return false;
 //		}
 		return true;
+	}
+
+	//=======================
+	// Misc API
+	//=======================
+	/**
+	 * Fetches information about an advertisement using a trip ID.
+	 * @param tripID 		-	An integer representing a trip
+	 * @return An AdInformation object if found. Null otherwise.
+	 */
+	public AdInformation getAdInformation(int tripID) {
+		String adInformation = "SELECT CONCAT(users.firstName, ' ', users.lastName) AS name, " +
+				"users.phone, car.make, car.model, car.year, car.licensePlate FROM users " +
+				"LEFT JOIN car ON car.operator = users.username " +
+				"WHERE users.username IN (SELECT trip.operator FROM trip WHERE trip.tripID = ?);";
+		PreparedStatement ps = null;
+		AdInformation info = null;
+		try {
+			ps = c.prepareStatement(adInformation);
+			ps.setInt(1, tripID);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				info = new AdInformation(rs.getString("name"),
+										 rs.getString("phone"),
+										 rs.getString("make"),
+										 rs.getString("model"),
+										 rs.getInt("year"),
+										 rs.getString("licensePlate"));
+			}
+			ps.close();
+			logger.info("Ad information has been fetched");
+			return info;
+		} catch (Exception e) {
+			logger.error(e.getClass().getName() + ": " + e.getMessage());
+			return null;
+		}
 	}
 
 	//=======================

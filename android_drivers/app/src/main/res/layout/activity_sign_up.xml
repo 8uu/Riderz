@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SignUpDriver" tools:layout_editor_absoluteY="25dp">
+
+    <ScrollView
+        android:id="@+id/signUpScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/signUpError"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/signUpFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:hint="@string/firstname"
+                android:inputType="textPersonName"
+                android:textAlignment="viewStart"
+                android:maxLength="@integer/maximum_first_name_length"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/signUpLastName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:hint="@string/lastname"
+                android:inputType="textPersonName"
+                android:maxLength="@integer/maximum_last_name_length"
+                app:layout_constraintBottom_toTopOf="@+id/signUpUsername"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signUpFirstName" />
+
+            <EditText
+                android:id="@+id/signUpUsername"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:hint="@string/username"
+                android:inputType="textPersonName"
+                android:maxLength="@integer/maximum_username_length"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signUpLastName" />
+
+            <EditText
+                android:id="@+id/signUpPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:hint="@string/phone_number"
+                android:inputType="phone"
+                android:maxLength="@integer/maximum_phone_length"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signUpUsername" />
+
+            <EditText
+                android:id="@+id/signUpPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:maxLength="@integer/maximum_password_length"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signUpPhoneNumber" />
+
+            <EditText
+                android:id="@+id/signUpVerifyPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:hint="@string/verify_password"
+                android:inputType="textPassword"
+                android:maxLength="@integer/maximum_password_length"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signUpPassword" />
+
+            <EditText
+                android:id="@+id/signUpEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:maxLength="@integer/maximum_email_length"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signUpVerifyPassword"
+                app:layout_constraintVertical_bias="0.097" />
+
+            <EditText
+                android:id="@+id/signUpCarMake"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:hint="@string/car_manufacturer"
+                android:maxLength="@integer/maximum_make_length"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/signUpCarModel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:hint="@string/car_model"
+                android:maxLength="@integer/maximum_model_length"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/signUpCarYear"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:hint="@string/car_model_year"
+                android:maxLength="@integer/maximum_year_length"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/signUpCarSeats"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:hint="@string/seats_available"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/signUpFuelEffiency"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:hint="@string/gaz_per_kilometer_l_km"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/signUpLicensePlate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:hint="@string/license_plate"
+                android:maxLength="@integer/maximum_license_plate_length"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/signUpError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_error_text"
+        android:visibility="invisible"
+        android:layout_marginTop="@dimen/textbox_margin"
+        android:layout_marginBottom="@dimen/textbox_margin"
+        android:textColor="@color/errorColor"
+        app:layout_constraintBottom_toTopOf="@+id/signUpButtonLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpScrollView" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/signUpButtonLayout"
+        android:layout_width="@dimen/button_width_large"
+        android:layout_height="100dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpError">
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/buttonTextColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

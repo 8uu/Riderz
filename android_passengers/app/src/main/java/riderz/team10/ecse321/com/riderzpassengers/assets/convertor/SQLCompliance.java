@@ -1,4 +1,4 @@
-package riderz.team10.ecse321.com.riderzpassengers;
+package riderz.team10.ecse321.com.riderzpassengers.assets.convertor;
 
 public class SQLCompliance {
     /**

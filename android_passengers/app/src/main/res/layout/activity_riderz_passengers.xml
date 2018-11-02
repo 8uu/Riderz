@@ -1,96 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/login_background"
-    tools:context=".RiderzPassengers">
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@drawable/login_background"
+                                             tools:context=".RiderzPassengers">
 
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="0dp"
-        android:layout_height="300dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <EditText
-            android:id="@+id/username"
+            android:id="@+id/loginOuterLayout"
             android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:ems="10"
-            android:hint="@string/username_hint"
-            android:inputType="textPersonName"
-            android:maxLength="40"
-            android:singleLine="true"
-            android:textColor="@color/loginColor"
-            android:textColorHint="@color/loginColorHint"
-            app:layout_constraintBottom_toTopOf="@+id/password"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="spread_inside" />
-
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="24dp"
-            android:ems="10"
-            android:hint="@string/password_hint"
-            android:inputType="textPassword"
-            android:maxLength="20"
-            android:singleLine="true"
-            android:textColor="@color/colorAccent"
-            android:textColorHint="@color/loginColor"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/username" />
-
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/constraintLayout2"
-            android:layout_width="200dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="24dp"
+            android:layout_height="@dimen/outer_layout_height_medium"
+            android:layout_marginStart="@dimen/outer_layout_margin_horizontal"
+            android:layout_marginEnd="@dimen/outer_layout_margin_horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password">
+            app:layout_constraintTop_toTopOf="parent">
 
-            <Button
-                android:id="@+id/login"
-                android:layout_width="0dp"
+        <TextView
+                android:id="@+id/loginError"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/colorPrimary"
-                android:text="@string/login_button"
-                android:textColor="@color/loginButton"
-                app:layout_constraintBottom_toTopOf="@+id/register"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/register"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:background="@color/colorPrimary"
-                android:text="@string/register_button"
-                android:textColor="@color/loginButton"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:text="@string/default_error_text"
+                android:textColor="@color/errorColor"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/login" />
+                app:layout_constraintTop_toBottomOf="@+id/loginButtonLayout" />
+
+        <EditText
+                android:id="@+id/loginUsername"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:hint="@string/username_hint"
+                android:inputType="textPersonName"
+                android:maxLength="@integer/maximum_username_length"
+                android:singleLine="true"
+                android:textColor="@color/loginTextColor"
+                android:textColorHint="@color/loginHintColor"
+                app:layout_constraintBottom_toTopOf="@+id/loginPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread_inside" />
+
+        <EditText
+                android:id="@+id/loginPassword"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:hint="@string/password_hint"
+                android:inputType="textPassword"
+                android:maxLength="@integer/maximum_password_length"
+                android:singleLine="true"
+                android:textColor="@color/loginTextColor"
+                android:textColorHint="@color/loginHintColor"
+                app:layout_constraintBottom_toTopOf="@+id/loginButtonLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginUsername" />
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/loginButtonLayout"
+                android:layout_width="200dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/loginError"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginPassword">
+
+            <Button
+                    android:id="@+id/forgotPasswordButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/forgot_button"
+                    android:textColor="@color/loginTextColor"
+                    app:layout_constraintBottom_toTopOf="@+id/loginButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                    android:id="@+id/loginButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/login_button"
+                    android:textColor="@color/loginTextColor"
+                    app:layout_constraintBottom_toTopOf="@+id/loginRegisterButton"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/forgotPasswordButton" />
+
+            <Button
+                    android:id="@+id/loginRegisterButton"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/register_button"
+                    android:textColor="@color/loginTextColor"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/loginButton"/>
+
         </android.support.constraint.ConstraintLayout>
 
     </android.support.constraint.ConstraintLayout>

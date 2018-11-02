@@ -1,7 +1,15 @@
 <resources>
     <string name="app_name">Riderz Passengers</string>
+
+    <!-- Global components -->
+    <string name="default_error_text">No errors</string>
     <string name="username_hint">Username</string>
     <string name="password_hint">Password</string>
+    <string name="email_hint">Email</string>
+    <string name="confirm_button_global">CONFIRM</string>
+    <string name="cancel_button_global">CANCEL</string>
+
+    <!-- RiderzPassengers components -->
     <string name="login_button">LOGIN</string>
     <string name="register_button">REGISTER</string>
     <string name="title_activity_maps_passenger">Map</string>
@@ -10,4 +18,70 @@
     <string name="search_hint_end">Find Dropoff Location</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <string name="action_settings">Settings</string>
+    <string name="pick_arrival_time">Select Arrival Time</string>
+    <string name="forgot_button">FORGOT PASSWORD</string>
+
+    <!-- ResetPasswordVerification components -->
+    <string name="title_activity_reset_password_verification">Verify Your Credentials</string>
+    <string name="confirm_button">VERIFY</string>
+
+    <!-- ResetPassword components -->
+    <string name="title_activity_reset_password">Reset Password</string>
+    <string name="reset_button">RESET PASSWORD</string>
+    <string name="new_password_hint">New Password</string>
+    <string name="confirm_new_password_hint">Confirm New Password</string>
+
+    <!-- ModifyEmail components -->
+    <string name="title_activity_modify_email">Modify Email</string>
+    <string name="modify_email_hint">New Email Address</string>
+    <string name="change_email_button">CHANGE EMAIL</string>
+
+    <!-- ModifyContact components -->
+    <string name="title_activity_modify_contact">Modify Contact Information</string>
+    <string name="modify_phone_hint">New Phone Number</string>
+    <string name="change_phone_button">CHANGE NUMBER</string>
+
+
+    <!-- MainNavigation components -->
+    <string name="title_activity_main_navigation">Riderz Passengers</string>
+
+    <!-- EditTrip components -->
+    <string name="title_activity_edit_trip">Modify Trips</string>
+
+    <!-- EditTrip template components -->
+    <string name="title_activity_edit_trip_template">Modify Trip</string>
+    <string name="starting_address_hint">Starting Address</string>
+    <string name="starting_time_hint">YYYY-MM-DD HH:MM:SS</string>
+    <string name="ending_address_hint">Ending Address</string>
+    <string name="ending_time_hint">YYYY-MM-DD HH:MM:SS</string>
+
+    <!-- PastTrip components -->
+    <string name="title_activity_past_trip">Past Trips</string>
+
+    <!-- Settings components -->
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- About components -->
+    <string name="title_activity_about">About</string>
+
+    <!-- Action bar -->
+    <string name="action_logout">Logout</string>
+
+
+    <!-- SignUpPassenger components -->
+    <string name="email">Email</string>
+    <string name="phonenumber">PhoneNumber</string>
+    <string name="username">Username</string>
+    <string name="lastname">Last Name</string>
+    <string name="firstname">FirstName</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="verify_password">Verify Password</string>
+    <string name="password">Password</string>
+    <string name="phone_number">Phone Number</string>
+
+    <!-- ViewReservation components -->
+    <string name="title_activity_view_reservation">Remove Reservations</string>
+    <string name="title_activity_user_profile">UserProfile</string>
+
+    <string name="title_activity_ads_listings">Available Trips</string>
 </resources>

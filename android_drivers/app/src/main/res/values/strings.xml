@@ -18,6 +18,25 @@
     <string name="title_activity_reset_password_verification">Verify Your Credentials</string>
     <string name="confirm_button">VERIFY</string>
 
+    <string name="title_activity_driver_trip_form">Driver Trip Form</string>
+    <string name="startlocation_hint">Enter Start Address</string>
+    <string name="endlocation_hint">Enter End Address</string>
+    <string name="newtrip_button">Create Trip</string>
+    <string name="addTrip">Add New Trip</string>
+    <string name="starttime_hint">hh:mm:ss</string>
+    <string name="numberseats_hint">Enter Number of Seats</string>
+    <string name="startdate_hint">YYYY-MM-DD</string>
+    <string name="title_activity_driver_profile">DriverProfile</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- GoogleMaps components -->
+    <string name="title_activity_maps_drivers">Map</string>
+    <string name="search_hint_start">Find Starting Location</string>
+    <string name="confirmation">See Itinerary</string>
+    <string name="finalize">Finalize Trip</string>
+    <string name="search_hint_end">Find Dropoff Location</string>
+
+
     <!-- ResetPassword components -->
     <string name="title_activity_reset_password">Reset Password</string>
     <string name="reset_button">RESET PASSWORD</string>
@@ -68,4 +87,23 @@
 
     <!-- Action bar -->
     <string name="action_logout">Logout</string>
+
+
+    <!-- SignUpDriver components -->
+    <string name="email">Email address</string>
+    <string name="phonenumber">Phone Number</string>
+    <string name="username">Username</string>
+    <string name="lastname">Last Name</string>
+    <string name="firstname">First Name</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="verify_password">Verify Password</string>
+    <string name="password">Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="car_manufacturer">Car Make</string>
+    <string name="car_model">Car Model</string>
+    <string name="car_model_year">Car Model Year</string>
+    <string name="seats_available">Seats Available</string>
+    <string name="gaz_per_kilometer_l_km">Fuel efficiency (L/100km)</string>
+    <string name="license_plate">License Plate #</string>
+
 </resources>

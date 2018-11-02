@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context=".settings.ModifyEmail">
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/outer_layout_height_medium"
+            android:layout_marginStart="@dimen/outer_layout_margin_horizontal"
+            android:layout_marginEnd="@dimen/outer_layout_margin_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+                android:id="@+id/updateEmail"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/textbox_height"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:hint="@string/modify_email_hint"
+                app:layout_constraintBottom_toTopOf="@+id/updateEmailError"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.ConstraintLayout
+                android:id="@+id/updateEmailButtons"
+                android:layout_width="@dimen/button_width_large"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/updateEmailError">
+
+            <Button
+                    android:id="@+id/updateEmailButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:text="@string/change_email_button"
+                    android:textColor="@color/buttonTextColor"
+                    android:maxLength="@integer/maximum_email_length"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+                android:id="@+id/updateEmailError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/textbox_margin"
+                android:layout_marginBottom="@dimen/textbox_margin"
+                android:text="@string/default_error_text"
+                android:textColor="@color/errorColor"
+                app:layout_constraintBottom_toTopOf="@+id/updateEmailButtons"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/updateEmail" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
