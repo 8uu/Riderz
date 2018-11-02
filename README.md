@@ -30,6 +30,6 @@ Hosting:                    Tomcat8
 ## Backlog
 - Refer to the issues and projects tab for the backlog.
 
-## Worflow
+## Workflow
 
 Work on feature branches, merge into dev when done, then merge to master using pull requests
